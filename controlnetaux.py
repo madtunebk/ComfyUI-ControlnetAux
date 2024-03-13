@@ -1,7 +1,7 @@
 from controlnet_aux.processor import Processor
 import traceback
 
-from .nodes.funcs import pil2tensor, tensor2pil
+from .funcs import pil2tensor, tensor2pil
 
 class controlnet_auxiar:
     def __init__(self):
