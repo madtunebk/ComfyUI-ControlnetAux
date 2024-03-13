@@ -13,7 +13,7 @@ This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxi
 
 The node offers the following optional parameters for customization:
 
-- **low_threshold**: An integer specifying the low threshold value for image processing. Default: 50, Range: 1-200.
+- **low_threshold**: An integer specifying the low threshold value for image processing. Default: 100, Range: 1-200.
 - **high_threshold**: An integer specifying the high threshold value for image processing. Default: 100, Range: 1-200.
 - **image_resolution**: An integer specifying the resolution of the processed image. Default: 512, Range: 512-1024.
 
