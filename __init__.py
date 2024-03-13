@@ -1,3 +1,10 @@
+"""
+@author: Cornea Valentin
+@title: ComfyUI ControlnetAux
+@nickname: ComfyUI ControlnetAux
+@description: This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques.
+"""
+
 from controlnet_aux.processor import Processor
 import traceback
 
@@ -45,10 +52,3 @@ class controlnet_auxiar:
 NODE_CLASS_MAPPINGS = {
     "ControlNet Auxiliar": controlnet_auxiar
 }
-
-"""
-@author: Cornea Valentin
-@title: ComfyUI ControlnetAux
-@nickname: ComfyUI ControlnetAux
-@description: This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques.
-"""
