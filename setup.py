@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='ComfyUI_ControlnetAux',
+    name='ComfyUI-ControlnetAux',
     version='1.0.0',
     description='ComfyUI Custom Node: ControlNet Auxiliar',
     long_description='This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques.',
