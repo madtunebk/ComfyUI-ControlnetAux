@@ -41,8 +41,11 @@ Below is an example workflow demonstrating the usage of the ControlNet Auxiliar 
 
 ![Example Workflow](/workflows/example.png) [Download Example Workflow JSON](/workflows/example.json)
 
-## Node Class Mappings
+## Note: Work in Progress
+This project is currently under development and is not yet complete. While it is functional to some extent, please be aware that there may be bugs, incomplete features, or other issues. Contributions, feedback, and suggestions are welcome!
 
+
+## Node Class Mappings
 The ControlNet Auxiliar node is mapped to the class `controlnet_auxiar` within the `controlnet_aux.processor` module.
 
 ---
