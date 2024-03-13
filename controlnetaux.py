@@ -16,8 +16,8 @@ class controlnet_auxiar:
                 "mode": ([modules, ])
             },
             "optional": {
-                "low_threshold": ("INT", {"default": 50, "min": 1, "max": 200, "step": 1}),
-                "high_threshold": ("INT", {"default": 100, "min": 1, "max": 200, "step": 1}),
+                "low_threshold": ("INT", {"default": 100, "min": 1, "max": 200, "step": 1}),
+                "high_threshold": ("INT", {"default": 200, "min": 1, "max": 200, "step": 1}),
                 "image_resolution": ("INT", {"default": 512, "min": 512, "max": 1024, "step": 1}),
             }
         }
@@ -37,7 +37,6 @@ class controlnet_auxiar:
             processed_image = processor(convert_image, to_pil=True)
             return (pil2tensor(processed_image),)
         except:
-            print(type(convert_image))
             traceback.print_exc()
             raise ValueError("Unsupported image format")
 
