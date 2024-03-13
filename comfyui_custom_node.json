@@ -1,0 +1,17 @@
+{
+    "name": "ControlNet Auxiliar",
+    "description": "Provides auxiliary functionalities for image processing tasks.",
+    "author": "Cornea Valentin",
+    "version": "1.0.0",
+    "node_class": "controlnet_aux.processor",
+    "inputs": {
+      "image": "IMAGE",
+      "mode": [ "scribble_hed", "softedge_hed", "scribble_hedsafe", "softedge_hedsafe", "depth_midas", "openpose", "openpose_face", "openpose_faceonly", "openpose_full", "openpose_hand", "scribble_pidinet", "softedge_pidinet", "scribble_pidsafe", "softedge_pidsafe", "normal_bae", "lineart_coarse", "lineart_realistic", "lineart_anime", "depth_zoe", "depth_leres", "depth_leres++", "shuffle", "mediapipe_face", "canny"]
+    },
+    "outputs": {
+      "processed_image": "IMAGE"
+    },
+    "category": "Image Processing",
+    "tags": ["image", "processing", "auxiliary"],
+    "icon": "workflows/example.png"
+  }
