@@ -27,6 +27,14 @@ The node provides the following functionality:
 
 - **process_image**: Processes the input image according to the specified mode and parameters, producing the processed image as output.
 
+### Python Package Requirements
+
+- **timm==0.6.12**
+- **controlnet-aux==0.0.7**
+- **mediapipe** (optional)
+
+
+
 ## Example Workflow
 
 Below is an example workflow demonstrating the usage of the ControlNet Auxiliar node:
