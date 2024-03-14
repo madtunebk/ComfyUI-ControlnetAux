@@ -31,7 +31,7 @@ The node provides the following functionality:
 
 - **timm==0.6.12**
 - **controlnet-aux==0.0.7**
-- **mediapipe** (optional)
+- **mediapipe**
 
 
 
