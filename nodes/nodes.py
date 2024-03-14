@@ -1,4 +1,4 @@
-import traceback
+import traceback, os
 from controlnet_aux import (
     HEDdetector, MidasDetector, MLSDdetector, OpenposeDetector,
     PidiNetDetector, NormalBaeDetector, LineartDetector,
@@ -42,11 +42,10 @@ for model_name in models:
             elif modaux == "openpose":
                 detector = OpenposeDetector.from_pretrained("lllyasviel/Annotators")
             elif modaux == "dwpose":
-                det_config  = kwargs.get("det_config", "configs/det/det_config.yaml")
-                det_ckpt    = kwargs.get("det_ckpt", "checkpoints/det/det_ckpt.pth")
-                pose_config = kwargs.get("pose_config", "configs/pose/pose_config.yaml")
-                pose_ckpt   = kwargs.get("pose_ckpt", "checkpoints/pose/pose_ckpt.pth")
-                detector = DWposeDetector(device=device) ## will need to fix it !!!
+                script_dir = os.path.dirname(os.path.abspath(__file__))
+                det_config = os.path.join(script_dir, "dwpose/yolox_config/yolox_l_8xb8-300e_coco.py")
+                pose_config = os.path.join(script_dir, "dwpose/dwpose_config/dwpose-l_384x288.py")
+                detector = DWposeDetector(det_config=det_config, pose_config=pose_config, device=device) ## will need to fix it !!!
             elif modaux == "pidi":
                 detector = PidiNetDetector.from_pretrained("lllyasviel/Annotators")
             elif modaux == "normal_bae":
