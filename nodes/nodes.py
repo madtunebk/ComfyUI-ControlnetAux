@@ -46,7 +46,7 @@ for model_name in models:
                 det_ckpt    = kwargs.get("det_ckpt", "checkpoints/det/det_ckpt.pth")
                 pose_config = kwargs.get("pose_config", "configs/pose/pose_config.yaml")
                 pose_ckpt   = kwargs.get("pose_ckpt", "checkpoints/pose/pose_ckpt.pth")
-                detector = DWposeDetector(det_config=det_config, det_ckpt=det_ckpt, pose_config=pose_config, pose_ckpt=pose_ckpt, device=device) ## will need to fix it !!!
+                detector = DWposeDetector(device=device) ## will need to fix it !!!
             elif modaux == "pidi":
                 detector = PidiNetDetector.from_pretrained("lllyasviel/Annotators")
             elif modaux == "normal_bae":

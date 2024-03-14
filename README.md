@@ -9,15 +9,12 @@ This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxi
 - **image**: The input image for processing.
 - **mode**: Specifies the processing mode, including options such as scribble_hed, softedge_hed, depth_midas, openpose, and more.
 
-### Optional Parameters
-
-The node offers the following optional parameters for customization:
-
-- **low_threshold**: An integer specifying the low threshold value for image processing. Default: 100, Range: 1-200.
-- **high_threshold**: An integer specifying the high threshold value for image processing. Default: 100, Range: 1-200.
-- **image_resolution**: An integer specifying the resolution of the processed image. Default: 512, Range: 512-1024.
-
-*(Note: These parameters are only applicable for the Canny mode. Additional optional parameters for other modes are currently being developed.)*
+### To support **DWPose** which is dependent on **MMDetection**, **MMCV** and **MMPose**
+**pip install -U openmim**
+**mim install mmengine**
+**mim install "mmcv>=2.0.1"**
+**mim install "mmdet>=3.1.0"**
+**mim install "mmpose>=1.1.0"**
 
 ### Return Types
 
