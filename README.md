@@ -17,6 +17,8 @@ The node offers the following optional parameters for customization:
 - **high_threshold**: An integer specifying the high threshold value for image processing. Default: 100, Range: 1-200.
 - **image_resolution**: An integer specifying the resolution of the processed image. Default: 512, Range: 512-1024.
 
+*(Note: These parameters are only applicable for the Canny mode. Additional optional parameters for other modes are currently being developed.)*
+
 ### Return Types
 
 The ControlNet Auxiliar node returns processed images.
