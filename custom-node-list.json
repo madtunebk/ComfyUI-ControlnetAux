@@ -6394,7 +6394,6 @@
             "files": [
                 "https://github.com/madtunebk/ComfyUI-ControlnetAux"
             ],
-            "pip": ["timm==0.6.12", "controlnet-aux==0.0.7", "mediapipe"],
             "install_type": "git-clone",
             "description": "This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques."
         }
