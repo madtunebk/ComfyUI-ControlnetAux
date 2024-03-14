@@ -10,7 +10,6 @@ This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxi
 - **mode**: Specifies the processing mode, including options such as scribble_hed, softedge_hed, depth_midas, openpose, and more.
 
 ### To support **DWPose** which is dependent on **MMDetection**, **MMCV** and **MMPose**
-- **pip install -U openmim**
 - **mim install mmengine**
 - **mim install "mmcv>=2.0.1"**
 - **mim install "mmdet>=3.1.0"**
