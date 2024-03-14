@@ -3,13 +3,13 @@ from controlnet_aux import (
     HEDdetector, MidasDetector, MLSDdetector, OpenposeDetector,
     PidiNetDetector, NormalBaeDetector, LineartDetector,
     LineartAnimeDetector, CannyDetector, ContentShuffleDetector,
-    ZoeDetector, MediapipeFaceDetector, SamDetector, LeresDetector
+    ZoeDetector, MediapipeFaceDetector, SamDetector, LeresDetector, DWposeDetector
 )
-from .funcs import pil2tensor, tensor2pil
+from .funcs import pil2tensor, tensor2pil, device
 from .options import optional_params
 
 # List of controlnet aux models that can be used
-models = ['hed', 'midas', 'mlsd', 'openpose', "pidi", 'normal_bae', 'lineart',
+models = ['hed', 'midas', 'mlsd', 'openpose', "pidi", "dwpose", 'normal_bae', 'lineart',
           'lineart_anime', 'zoe', 'sam', 'leres', 'canny', 'content', 'face_detector']
 
 NODE_CLASS_MAPPINGS = {}
@@ -41,6 +41,12 @@ for model_name in models:
                 detector = MLSDdetector.from_pretrained("lllyasviel/Annotators")
             elif modaux == "openpose":
                 detector = OpenposeDetector.from_pretrained("lllyasviel/Annotators")
+            elif modaux == "dwpose":
+                det_config  = kwargs.get("det_config", "configs/det/det_config.yaml")
+                det_ckpt    = kwargs.get("det_ckpt", "checkpoints/det/det_ckpt.pth")
+                pose_config = kwargs.get("pose_config", "configs/pose/pose_config.yaml")
+                pose_ckpt   = kwargs.get("pose_ckpt", "checkpoints/pose/pose_ckpt.pth")
+                detector = DWposeDetector(det_config=det_config, det_ckpt=det_ckpt, pose_config=pose_config, pose_ckpt=pose_ckpt, device=device) ## will need to fix it !!!
             elif modaux == "pidi":
                 detector = PidiNetDetector.from_pretrained("lllyasviel/Annotators")
             elif modaux == "normal_bae":
