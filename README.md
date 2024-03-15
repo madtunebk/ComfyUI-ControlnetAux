@@ -52,14 +52,6 @@ The node returns processed images.
 - **mediapipe**
 
 ## Example Workflow
-
-1. **Load Input Image**: Load the input image.
-2. **Specify Processing Mode**: Select the processing mode.
-3. **Adjust Optional Parameters**: Optionally adjust parameters.
-4. **Process Image**: Apply the node to process the input image.
-5. **Retrieve Processed Image**: Get the processed image.
-6. **Further Processing (Optional)**: Further process or use the image as needed.
-
 ![Example Workflow](/workflows/example.png) [Download Example Workflow JSON](/workflows/example.json)
 
 ## Note: Work in Progress
