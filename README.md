@@ -2,17 +2,24 @@
 
 This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalities for image processing tasks. It supports various image manipulation and enhancement operations.
 
-## Manual Installation Guide
+### Python Package Requirements
+
+- **timm==0.6.12**
+- **controlnet-aux==0.0.7**
+- **mediapipe**
+
+# Manual Installation Guide for ComfyUI-ControlnetAux
 
 1. **Clone the Repository:**
-   - Navigate to the `custom_nodes` directory in your ComfyUI installation.
-   - Clone the repository:
+   - Open your terminal or command prompt.
+   - Navigate to the directory where ComfyUI is installed, specifically the `custom_nodes` folder (e.g., `.ComfyUI/custom_nodes/`).
+   - Run the following command:
      ```bash
      git clone https://github.com/madtunebk/ComfyUI-ControlnetAux.git
      ```
 
 2. **Install Dependencies:**
-   - Navigate to the cloned directory:
+   - Navigate into the cloned directory:
      ```bash
      cd ComfyUI-ControlnetAux
      ```
@@ -20,13 +27,24 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
      ```bash
      source ../../venv/bin/activate
      ```
-   - Install required Python packages:
+   - Install the required Python packages using pip:
      ```bash
      pip install -r requirements.txt
      ```
+   - To support **DWPose** which is dependent on **MMDetection**, **MMCV**, and **MMPose**, you need to install additional packages:
+     ```bash
+     pip install openmim
+     mim install mmengine
+     mim install "mmcv>=2.0.1"
+     mim install "mmdet>=3.1.0"
+     mim install "mmpose>=1.1.0"
+     ```
 
 3. **Run the Application:**
-   - Follow instructions in the repository's README or documentation to use the application.
+   - Once the dependencies are installed, you can run the application.
+   - Follow the instructions in the repository's README or documentation to start using the ControlnetAux application.
+
+This installation guide is for Ubuntu Linux.
 
 This guide is for Ubuntu Linux.
 
@@ -45,11 +63,6 @@ The node returns processed images.
 
 - **process_image**: Processes input image based on specified mode and parameters.
 
-### Python Package Requirements
-
-- **timm==0.6.12**
-- **controlnet-aux==0.0.7**
-- **mediapipe**
 
 ## Example Workflow
 ![Example Workflow](/workflows/example.png) [Download Example Workflow JSON](/workflows/example.json)
