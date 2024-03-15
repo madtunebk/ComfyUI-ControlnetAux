@@ -11,8 +11,8 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
 # Manual Installation Guide for ComfyUI-ControlnetAux
 
 1. **Clone the Repository:**
-   - Open your terminal or command prompt.
-   - Navigate to the directory where ComfyUI is installed, specifically the `custom_nodes` folder (e.g., `.ComfyUI/custom_nodes/`).
+   - Open your terminal.
+   - Navigate to the directory where ComfyUI is installed, ensure that you are in the `custom_nodes` folder (e.g., ComfyUI/custom_nodes/).
    - Run the following command:
      ```bash
      git clone https://github.com/madtunebk/ComfyUI-ControlnetAux.git
@@ -42,11 +42,9 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
 
 3. **Run the Application:**
    - Once the dependencies are installed, you can run the application.
-   - Follow the instructions in the repository's README or documentation to start using the ControlnetAux application.
 
 This installation guide is for Ubuntu Linux.
 
-This guide is for Ubuntu Linux.
 
 ## Usage
 
