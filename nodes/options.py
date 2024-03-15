@@ -1,45 +1,40 @@
-from collections import namedtuple
 
-# Define a named tuple for parameter information
-ParameterInfo = namedtuple("ParameterInfo", ["type", "default", "min", "max", "step"])
-
-# Define the optional parameters using the named tuple
 optional_params = {
     "hed": {
-        "safe": ParameterInfo("BOOLEAN", False, False, True, None),
-        "scribble": ParameterInfo("BOOLEAN", False, False, True, None)
+        "safe": ("BOOLEAN", {"default": False, "false": "enabled", "true": "disabled"}),
+        "scribble": ("BOOLEAN", {"default": False, "False": "enabled", "true": "disabled"})
     },
     "openpose": {
-        "include_body": ParameterInfo("BOOLEAN", True, False, True, None),
-        "include_hand": ParameterInfo("BOOLEAN", True, False, True, None),
-        "include_face": ParameterInfo("BOOLEAN", True, False, True, None)
+        "include_body": ("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
+        "include_hand": ("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
+        "include_face": ("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
     },
     "mlsd": {
-        "thr_v": ParameterInfo("FLOAT", 0.1, 0.01, 1.0, 0.01),
-        "thr_d": ParameterInfo("FLOAT", 0.1, 0.01, 1.0, 0.01)
+        "thr_v": ("FLOAT", {"default": 0.1, "min": 0.01, "max": 1.0, "step": 0.01}),
+        "thr_d": ("FLOAT", {"default": 0.1, "min": 0.01, "max": 1.0, "step": 0.01}),
     },
     "pidi": {
-        "safe": ParameterInfo("BOOLEAN", True, False, True, None),
-        "scribble": ParameterInfo("BOOLEAN", True, False, True, None),
-        "apply_filter": ParameterInfo("BOOLEAN", True, False, True, None),
+        "safe": ("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
+        "scribble":("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
+        "apply_filter":("BOOLEAN", {"default": True, "false": "enabled", "true": "disabled"}),
     },
     "lineart": {
-        "coarse": ParameterInfo("BOOLEAN", False, False, True, None),
+        "coarse": ("BOOLEAN", {"default": False, "false": "enabled", "true": "disabled"}),
     },
     "depth_leres": {
-        "boost": ParameterInfo("BOOLEAN", False, False, True, None),
+        "boost": ("BOOLEAN", {"default": False, "false": "enabled", "true": "disabled"}),
     },
     "content": {
-        "h": ParameterInfo("INT", 512, 1, 1024, 1),
-        "w": ParameterInfo("INT", 512, 1, 1024, 1),
-        "f": ParameterInfo("INT", 10, 1, 1024, 1),
+        "h":  ("INT", {"default": 512, "min": 1, "max": 1024, "step": 1}),
+        "w":  ("INT", {"default": 512, "min": 1, "max": 1024, "step": 1}),
+        "f":  ("INT", {"default": 10, "min": 1, "max": 1024, "step": 1}),
     },
     "face_detector": {
-        "max_faces": ParameterInfo("INT", 1, 1, 5, 1),
-        "min_confidence": ParameterInfo("FLOAT", 0.5, 0.01, 1.0, 0.01),
+        'max_faces': ("INT", {"default": 1, "min": 1, "max": 5, "step": 1}),
+        "min_confidence": ("FLOAT", {"default": 0.5, "min": 0.01, "max": 1.0, "step": 0.01}),
     },
     "canny": {
-        "low_threshold": ParameterInfo("INT", 100, 1, 200, 1),
-        "high_threshold": ParameterInfo("INT", 200, 1, 200, 1),
+        "low_threshold":  ("INT", {"default": 100, "min": 1, "max": 200, "step": 1}),
+        "high_threshold": ("INT", {"default": 200, "min": 1, "max": 200, "step": 1}),
     }
 }
