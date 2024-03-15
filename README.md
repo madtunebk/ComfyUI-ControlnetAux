@@ -60,7 +60,23 @@ This project is under development. Contributions and feedback are welcome!
 
 ## Node Class Mappings
 
-The ControlNet Auxiliar node is mapped to the class `controlnet_auxiliary` in the `controlnet_aux.processor` module.
+The ControlNet Auxiliar node is mapped to various classes corresponding to different models:
+
+- `controlaux_hed`: HED model for edge detection.
+- `controlaux_midas`: Midas model for depth estimation.
+- `controlaux_mlsd`: MLSD model for line segment detection.
+- `controlaux_openpose`: Openpose model for human pose estimation.
+- `controlaux_dwpose`: DWPose model for human pose estimation.
+- `controlaux_pidi`: PidiNet model for image inpainting.
+- `controlaux_normal_bae`: NormalBae model for image restoration.
+- `controlaux_lineart`: Lineart model for image stylization.
+- `controlaux_lineart_anime`: Lineart Anime model for anime-style image stylization.
+- `controlaux_zoe`: Zoe model for depth super-resolution.
+- `controlaux_sam`: SAM model for image segmentation.
+- `controlaux_leres`: Leres model for image restoration.
+- `controlaux_canny`: Canny model for edge detection.
+- `controlaux_content`: Content Shuffle model for image processing.
+- `controlaux_face_detector`: Mediapipe Face Detector for face detection.
 
 ---
 
