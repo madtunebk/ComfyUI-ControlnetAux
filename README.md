@@ -12,7 +12,7 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
 
 1. **Clone the Repository:**
    - Open your terminal.
-   - Navigate to the directory where ComfyUI is installed, ensure that you are in the `custom_nodes` folder (e.g., ComfyUI/custom_nodes/).
+   - Navigate to the directory where ComfyUI is installed, ensure that you are in the `custom_nodes` folder (e.g., `ComfyUI/custom_nodes/` ).
    - Run the following command:
      ```bash
      git clone https://github.com/madtunebk/ComfyUI-ControlnetAux.git
