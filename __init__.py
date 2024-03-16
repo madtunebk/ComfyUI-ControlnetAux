@@ -7,8 +7,8 @@
 import sys 
 import os
 
-version_code = [0, 2]
-version_str  = f"V{version_code[0]}.{version_code[1]}" + (f'.{version_code[2]}' if len(version_code) > 2 else 'beta')
+version_code = [0, 3]
+version_str  = f"V{version_code[0]}.{version_code[1]}" + (f'.{version_code[2]}' if len(version_code) > 2 else ' beta')
 print(f"### Loading: ControlnetAux ({version_str})")
 
 
