@@ -105,5 +105,3 @@ The ControlNet Auxiliar node is mapped to various classes corresponding to diffe
 
 **Credits**: Developed using source code from [controlnet_aux](https://github.com/huggingface/controlnet_aux) by [Hugging Face](https://github.com/huggingface). Pretrained models provided by [lllyasviel](https://github.com/lllyasviel), [wanghaofan](https://huggingface.co/wanghaofan), [ybelkada](https://huggingface.co/ybelkada), and [openmmlab](https://openmmlab.com/). 
 
-**Python Libraries Imported**: mmdetection, MMDetection, MMCV, MMPose, controlnet_aux, timm, mediapipe.
-
