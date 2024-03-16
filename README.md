@@ -66,7 +66,7 @@ The node returns processed images.
 - **process_image**: Processes input image based on specified mode and parameters.
 
 ### Working Resolution
-The default working resolutions for ControlNet models in this repository are `512x512`, `512x768`, `768x512`, `768x1024`, `1024x768`, and `1024x1024` pixels. These resolutions are recommended for optimal performance and output quality.
+The default working resolutions for ControlNet models in this repository are `512x512`, `512x768`, `768x512`, `768x768`, `768x1024`, `1024x768`, and `1024x1024` pixels. These resolutions are recommended for optimal performance and output quality.
 
 ### Custom Resolutions
 Please note that using non-default resolutions may result in variations in output size. While the models are designed to handle a range of input resolutions, output sizes may not always be guaranteed to match the input resolution, especially for non-square or non-standard resolutions.
