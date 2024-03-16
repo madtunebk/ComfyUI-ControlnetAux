@@ -8,8 +8,8 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
 - **controlnet-aux==0.0.7**
 - **mediapipe**
 
-# Manual Installation Guide for ComfyUI-ControlnetAux
-
+# Manual Installation Guide for ComfyUI-ControlnetAux.  
+# Note: This installation guide is for Ubuntu Linux.
 1. **Clone the Repository:**
    - Open your terminal.
    - Navigate to the directory where ComfyUI is installed, ensure that you are in the `custom_nodes` folder (e.g., `ComfyUI/custom_nodes/` ).
@@ -42,8 +42,6 @@ This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalitie
 
 3. **Run the Application:**
    - Once the dependencies are installed, you can run the application.
-
-This installation guide is for Ubuntu Linux.
 
 
 ## Usage
