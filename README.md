@@ -2,6 +2,12 @@
 
 This ComfyUI custom node, ControlNet Auxiliar, provides auxiliary functionalities for image processing tasks. It supports various image manipulation and enhancement operations.
 
+# Installation
+
+Before using any source code from external libraries or services, it's advisable to test it in a safe environment such as sandbox machines or remote online services like Google Colab. These platforms provide isolated environments where you can evaluate the code without risking your local setup. Testing in such environments allows you to assess compatibility, functionality, and potential dependencies before integrating the code into your own projects. This practice helps in identifying any issues or conflicts early on and ensures a smoother integration process into your development workflow.
+
+You can find an example of testing ComfyUI with my custom node on 'Google Colab' in this [ComfyUI Colab notebook](/notebooks/ComfyUI-ControlnetAux.ipynb).
+
 ### Python Package Requirements
 
 - **timm==0.6.12**
