@@ -91,4 +91,5 @@ The ControlNet Auxiliar node is mapped to various classes corresponding to diffe
 
 ---
 
-**Credit**: Developed using source from [lllyasviel](https://github.com/lllyasviel).
+**Credits**: Developed using source code from [controlnet_aux](https://github.com/huggingface/controlnet_aux) by [Hugging Face](https://github.com/huggingface). Pretrained models provided by [lllyasviel](https://github.com/lllyasviel).
+
