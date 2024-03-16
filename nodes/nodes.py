@@ -1,4 +1,6 @@
-import traceback, os
+import traceback
+import os
+
 from controlnet_aux import (
     HEDdetector, MidasDetector, MLSDdetector, OpenposeDetector,
     PidiNetDetector, NormalBaeDetector, LineartDetector,
