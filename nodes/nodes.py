@@ -11,8 +11,8 @@ from .funcs import pil2tensor, tensor2pil, device
 from .options import optional_params
 
 # List of controlnet aux models that can be used
-models = ['hed', 'midas', 'mlsd', 'openpose', "pidi", "dwpose", 'normal_bae', 'lineart',
-          'lineart_anime', 'zoe', 'sam', 'leres', 'canny', 'content', 'face_detector']
+models = ["hed", "midas", "mlsd", "openpose", "pidi", "dwpose", "normal_bae", "lineart",
+          "lineart_anime", "zoe", "sam", "leres", "canny", "content", "face_detector"]
 
 NODE_CLASS_MAPPINGS = {}
 NODE_DISPLAY_NAME_MAPPINGS = {}
@@ -66,8 +66,12 @@ for model_name in models:
     new_class = type(f"controlaux_{model_name}", (object,), {
         "__init__": lambda self: None,
         "INPUT_TYPES": classmethod(lambda cls, model_name=model_name: {
-            "required": {"image": ("IMAGE",)},
-            "modaux": model_name,
+            "required": {
+                "image": ("IMAGE",),
+                "detect_resolution": ("INT", {"default": 512, "min": 256, "max": 1024, "step": 1}),
+                "image_resolution": ("INT", {"default": 512, "min": 256, "max": 1024, "step": 1}),
+            },
+            "modaux": model_name, 
             "optional": optional_params.get(model_name, {})
         }),
         "RETURN_TYPES": ("IMAGE",),
