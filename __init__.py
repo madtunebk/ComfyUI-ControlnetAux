@@ -21,5 +21,3 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
-
-# Credits: Developed using source code from controlnet_aux by Hugging Face. Pretrained models provided by lllyasviel, wanghaofan, and openmmlab.
