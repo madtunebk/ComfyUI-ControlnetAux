@@ -3,6 +3,7 @@
 @title: ComfyUI ControlnetAux
 @nickname: ComfyUI ControlnetAux
 @description: This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques.
+@credits: Developed using source code from controlnet_aux by Hugging Face. Pretrained models provided by lllyasviel, wanghaofan, and openmmlab
 """
 
 version_code = [0, 3]
@@ -20,3 +21,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
 }
 
 __all__ = ['NODE_CLASS_MAPPINGS', 'NODE_DISPLAY_NAME_MAPPINGS']
+
+# Credits: Developed using source code from controlnet_aux by Hugging Face. Pretrained models provided by lllyasviel, wanghaofan, and openmmlab.
