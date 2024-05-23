@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-controlnetaux"
+description = "This ComfyUI custom node, named ControlNet Auxiliar, is designed to provide auxiliary functionalities for image processing tasks. It is particularly useful for various image manipulation and enhancement operations. The node is integrated with functionalities for converting images between different formats and applying various image processing techniques."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = ["timm==0.6.12", "controlnet-aux==0.0.7", "mediapipe"]
+
+[project.urls]
+Repository = "https://github.com/madtunebk/ComfyUI-ControlnetAux"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-ControlnetAux"
+Icon = ""
