@@ -10,7 +10,7 @@ You can find an example of testing ComfyUI with my custom node on `Google Colab`
 
 ### Python Package Requirements
 
-- **timm==0.6.12**
+- **timm**
 - **controlnet-aux==0.0.7**
 - **mediapipe**
 
