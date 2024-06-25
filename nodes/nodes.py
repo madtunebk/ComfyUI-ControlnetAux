@@ -1,5 +1,7 @@
 import traceback
 import os
+from PIL import Image
+from tqdm import tqdm
 
 from controlnet_aux import (
     HEDdetector, MidasDetector, MLSDdetector, OpenposeDetector,
@@ -56,8 +58,19 @@ def process_image_wrapper(self, image, modaux, **kwargs):
             detector = MediapipeFaceDetector()
         else:
             raise ValueError(f"Invalid modaux argument: {modaux}")
-        processed_image = detector(tensor_pil, **kwargs)
-        return (pil2tensor(processed_image),)
+        
+        if isinstance(tensor_pil, Image.Image):
+            processed_image = detector(tensor_pil, **kwargs) 
+            return (pil2tensor(processed_image),)
+        
+        tensors = []
+        pbar = tqdm(range(len(tensor_pil)), desc=f"Proccessing: {modaux}")
+        for tensor in tensor_pil:
+            processed_image = detector(tensor, **kwargs)
+            tensors.append(processed_image) 
+            pbar.update(1)
+        return (pil2tensor(tensors),)
+    
     except Exception as e:
         traceback.print_exc()
         raise ValueError(f"Error processing image: {e}")
