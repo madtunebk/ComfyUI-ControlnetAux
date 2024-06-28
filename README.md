@@ -39,11 +39,11 @@ You can find an example of testing ComfyUI with my custom node on `Google Colab`
      ```
    - To support **DWPose** which is dependent on **MMDetection**, **MMCV**, and **MMPose**, you need to install additional packages:
      ```bash
-     pip install openmim
+     pip install -U openmim
+     pip install "mmcv>=2.0.1,<2.2.0" -U
      mim install mmengine
-     mim install "mmcv>=2.0.1"
-     mim install "mmdet>=3.1.0"
-     mim install "mmpose>=1.1.0"
+     mim install "mmdet>3.1.0" -U
+     mim install "mmpose>1.1.0" -U
      ```
 
 3. **Run the Application:**
